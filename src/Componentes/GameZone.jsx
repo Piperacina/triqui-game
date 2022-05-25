@@ -78,7 +78,7 @@ const GameZone = () => {
 
    return (
     <div className="text-center mt-10 mx-auto w-3/6 bg-slate-300 py-5">
-        <h1 className="font-black text-red-500 mt-5 mb-5">Es turno del jugador 1</h1>
+        <h1 className="font-black text-red-500 mt-5 mb-5">Es turno del jugador { playing? 'X':'O'}</h1>
         <table className="mx-auto mt-15 bg-white border-black w-3/4 h-1/2 text-5xl">
           <tbody>
           <tr className="border-0 border-b-4 border-b-gray-800 h-1/3">
