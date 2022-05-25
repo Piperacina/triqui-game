@@ -86,7 +86,7 @@ const GameZone = () => {
               className="border-0 border-r-4 border-r-gray-800 w-1/3 hover:bg-gray-400"
               id="zona11"
               onClick={(e) => {
-                setZonas[0](player(zonas[0]))
+                setZonas(player(zonas[0]))
                 testing()}}>
                 {zonas[0]}
             </td>
