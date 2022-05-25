@@ -62,18 +62,11 @@ const GameZone = () => {
   }
 
   const player = (x) => {
-    if (x === ''){
-      let jugador =''
-      if(playing){
-        setPlaying(false)
-        return('X');
-      }else{
-        setPlaying(true)
-        return('O');
-      } 
-    } else{
-      return x
-    }
+    const valor = zonas.map((zona,id) => id==x? (zona!=''? console.log('repitio') : (playing?zona='X':zona='O')):console.log('process'))
+    //const valores = zonas.map((zona,id) => id==x? zona=(playing? 'X':'O'): zona=zona )
+    setZonas(valor)
+    setPlaying(!playing)
+    
   }
 
    return (
@@ -86,7 +79,7 @@ const GameZone = () => {
               className="border-0 border-r-4 border-r-gray-800 w-1/3 hover:bg-gray-400"
               id="zona11"
               onClick={(e) => {
-                setZonas(player(zonas[0]))
+                player(0)
                 testing()}}>
                 {zonas[0]}
             </td>
@@ -94,7 +87,7 @@ const GameZone = () => {
               className="border-0 border-r-4 border-r-gray-800 w-1/3 hover:bg-gray-400"
               id="zona12"
               onClick={(e) => {
-                setZonas(player(zonas[1]))
+                player(1)
                 testing()}}>
                 {zonas[1]}
             </td>
@@ -102,7 +95,7 @@ const GameZone = () => {
               className="border-0 border-l-4 border-l-gray-800 w-1/3 hover:bg-gray-400"
               id="zona13"
               onClick={(e) => {
-                setZonas(player(zonas[2]))
+                player(2)
                 testing()}}>
                 {zonas[2]}
             </td>
@@ -112,7 +105,7 @@ const GameZone = () => {
               className="border-0 border-r-4 border-r-gray-800 w-1/3 hover:bg-gray-400"
               id="zona21"
               onClick={(e) => {
-                setZonas(player(zonas[3]))
+                player(3)
                 testing()}}>
                 {zonas[3]}
             </td>
@@ -120,7 +113,7 @@ const GameZone = () => {
               className="border-0 border-r-4 border-r-gray-800 w-1/3 hover:bg-gray-400"
               id="zona22"
               onClick={(e) => {
-                setZonas(player(zonas[4]))
+                player(4)
                 testing()}}>
                 {zonas[4]}
             </td>
@@ -128,7 +121,7 @@ const GameZone = () => {
               className="border-0 border-l-4 border-l-gray-800 w-1/3 hover:bg-gray-400"
               id="zona23"
               onClick={(e) => {
-                setZonas(player(zonas[5]))
+                player(5)
                 testing()}}>
                 {zonas[5]}
             </td>
@@ -138,7 +131,7 @@ const GameZone = () => {
               className="border-0 border-r-4 border-r-gray-800 w-1/3 hover:bg-gray-400"
               id="zona31"
               onClick={(e) => {
-                setZonas(player(zonas[6]))
+                player(6)
                 testing()}}>
                 {zonas[6]}
             </td>
@@ -146,7 +139,7 @@ const GameZone = () => {
               className="border-0 border-r-4 border-r-gray-800 w-1/3 hover:bg-gray-400"
               id="zona32"
               onClick={(e) => {
-                setZonas(player(zonas[7]))
+                player(7)
                 testing()}}>
                 {zonas[7]}
             </td>
@@ -154,7 +147,7 @@ const GameZone = () => {
               className="border-0 border-l-4 border-l-gray-800 w-1/3 hover:bg-gray-400"
               id="zona33"
               onClick={(e) => {
-                setZonas(player(zonas[8]))
+                player(8)
                 testing()}}>
                 {zonas[8]}
             </td>
