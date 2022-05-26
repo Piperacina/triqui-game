@@ -9,11 +9,6 @@ const Puntuacion = () => {
         <br/>
         <p className="text-white text-2xl w-5/6 mx-auto mt-10">Puntos del jugaor 1 (X) = {Jugador1}</p>
         <p className="text-white text-2xl w-5/6 mx-auto mt-10">Puntos del jugaor 2 (O) = {Jugador2}</p>
-        <input 
-            className="block border-2 w-4/6 mx-auto mt-10 mb-10 p-3 rounded-lg shadow-black shadow-md text-gray-400 uppercase font-bold hover:bg-gray-700 cursor-pointer"
-            value="reiniciar"
-            type="submit"
-        />
     </div>
   )
 }

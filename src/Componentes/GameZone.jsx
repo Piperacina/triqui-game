@@ -14,59 +14,73 @@ const GameZone = () => {
 
   const [zonas, setZonas] = useState(['','','','','','','','',''])
 
+  const player = (x) => {
+    
+    const valores = zonas.map((zona,id) => id===x? (zona!=''? zona=zona : (playing?zona='X':zona='O')):zona=zona)
+    console.log(valores)
+    setZonas(valores)
+    testing()
+    setPlaying(!playing)
+    
+  }
+
+  const restarting = () => {
+    setZonas(['','','','','','','','',''])
+    setRow1(false)
+    setCol1(false)
+    setRow2(false)
+    setCol2(false)
+    setRow3(false)
+    setCol3(false)
+    
+
+  }
+
   const testing = () => {
     if(zonas[0] !== '' && zonas[1] !== '' && zonas[2] !== '' && !row1){
       setRow1(true)
-      if(zonas[1] == 'X'){
+      if(zonas[0] == zonas[1] && zonas[1] == zonas[2] && zonas[2] == 'X'){
         console.log('gana jugador uno1')
-      }else{
+      }else if(zonas[0] == zonas[1] && zonas[1] == zonas[2] && zonas[2] == 'O'){
         console.log('gana jugador dos1')
       }
     }else if(zonas[3] !== '' && zonas[4] !== '' && zonas[5] !== '' && !row2){
       setRow2(true)
-      if(zonas[3] == 'X'){
+      if(zonas[3] == zonas[4] && zonas[4] == zonas[5] && zonas[5] == 'X'){
         console.log('gana jugador uno2')
-      }else{
+      }else if(zonas[3] == zonas[4] && zonas[4] == zonas[5] && zonas[5] == 'O'){
         console.log('gana jugador dos2')
       }
     }else if(zonas[6] !== '' && zonas[7] !== '' && zonas[8] !== '' && !row3){
       setRow3(true)
-      if(zona31 == 'X'){
+      if(zonas[6] == zonas[7] && zonas[7] == zonas[8] && zonas[8] == 'X'){
         console.log('gana jugador uno3')
-      }else{
+      }else if(zonas[6] == zonas[7] && zonas[7] == zonas[8] && zonas[8] == 'O'){
         console.log('gana jugador dos3')
       }
     }else if(zonas[0] !== '' && zonas[3] !== '' && zonas[6] !== '' && !col1){
       setCol1(true)
-      if(zona11 == 'X'){
+      if(zonas[0] == zonas[3] && zonas[3] == zonas[6] && zonas[6] == 'X'){
         console.log('gana jugador uno4')
-      }else{
+      }else if(zonas[0] == zonas[3] && zonas[3] == zonas[6] && zonas[6] == 'O'){
         console.log('gana jugador dos4')
       }
     }else if(zonas[1] !== '' && zonas[4] !== '' && zonas[7] !== '' && !col2){
       setCol2(true)
-      if(zona12 == 'X'){
+      if(zonas[1] == zonas[4] && zonas[4] == zonas[7] && zonas[7] == 'X'){
         console.log('gana jugador uno5')
-      }else{
+      }else if(zonas[1] == zonas[4] && zonas[4] == zonas[7] && zonas[7] == 'X'){
         console.log('gana jugador dos5')
       }
-    }else if(zonas[2] !== '' && zonas[5] !== '' && zonas[8] !== '' && !col3){
+    }else if(zonas[2] != '' && zonas[5] != '' && zonas[8] != '' && !col3){
       setCol3(true)
-      if(zona13 == 'X'){
+      if(zonas[2] == zonas[5] && zonas[5] == zonas[8] && zonas[8] == 'X'){
         console.log('gana jugador uno6')
-      }else{
+      }else if(zonas[2] == zonas[5] && zonas[5] == zonas[8] && zonas[8] == 'O'){
         console.log('gana jugador dos6')
       }
     }
 
-  }
-
-  const player = (x) => {
-    const valor = zonas.map((zona,id) => id==x? (zona!=''? console.log('repitio') : (playing?zona='X':zona='O')):console.log('process'))
-    //const valores = zonas.map((zona,id) => id==x? zona=(playing? 'X':'O'): zona=zona )
-    setZonas(valor)
-    setPlaying(!playing)
-    
   }
 
    return (
@@ -79,24 +93,21 @@ const GameZone = () => {
               className="border-0 border-r-4 border-r-gray-800 w-1/3 hover:bg-gray-400"
               id="zona11"
               onClick={(e) => {
-                player(0)
-                testing()}}>
+                player(0)}}>
                 {zonas[0]}
             </td>
             <td
               className="border-0 border-r-4 border-r-gray-800 w-1/3 hover:bg-gray-400"
               id="zona12"
               onClick={(e) => {
-                player(1)
-                testing()}}>
+                player(1)}}>
                 {zonas[1]}
             </td>
             <td
               className="border-0 border-l-4 border-l-gray-800 w-1/3 hover:bg-gray-400"
               id="zona13"
               onClick={(e) => {
-                player(2)
-                testing()}}>
+                player(2)}}>
                 {zonas[2]}
             </td>
           </tr>
@@ -105,24 +116,21 @@ const GameZone = () => {
               className="border-0 border-r-4 border-r-gray-800 w-1/3 hover:bg-gray-400"
               id="zona21"
               onClick={(e) => {
-                player(3)
-                testing()}}>
+                player(3)}}>
                 {zonas[3]}
             </td>
             <td
               className="border-0 border-r-4 border-r-gray-800 w-1/3 hover:bg-gray-400"
               id="zona22"
               onClick={(e) => {
-                player(4)
-                testing()}}>
+                player(4)}}>
                 {zonas[4]}
             </td>
             <td
               className="border-0 border-l-4 border-l-gray-800 w-1/3 hover:bg-gray-400"
               id="zona23"
               onClick={(e) => {
-                player(5)
-                testing()}}>
+                player(5)}}>
                 {zonas[5]}
             </td>
           </tr>
@@ -131,29 +139,32 @@ const GameZone = () => {
               className="border-0 border-r-4 border-r-gray-800 w-1/3 hover:bg-gray-400"
               id="zona31"
               onClick={(e) => {
-                player(6)
-                testing()}}>
+                player(6)}}>
                 {zonas[6]}
             </td>
             <td
               className="border-0 border-r-4 border-r-gray-800 w-1/3 hover:bg-gray-400"
               id="zona32"
               onClick={(e) => {
-                player(7)
-                testing()}}>
+                player(7)}}>
                 {zonas[7]}
             </td>
             <td
               className="border-0 border-l-4 border-l-gray-800 w-1/3 hover:bg-gray-400"
               id="zona33"
               onClick={(e) => {
-                player(8)
-                testing()}}>
+                player(8)}}>
                 {zonas[8]}
             </td>
           </tr>
           </tbody>
         </table>
+        <input 
+            className="block border-2 w-4/6 mx-auto mt-10 mb-10 p-3 rounded-lg shadow-black shadow-md text-gray-400 uppercase font-bold hover:bg-gray-700 cursor-pointer"
+            value="reiniciar"
+            type="submit"
+            onClick={() => restarting()}
+        />
     </div>
   )
 }
