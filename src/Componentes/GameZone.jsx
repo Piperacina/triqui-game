@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const GameZone = ({counter,addGame}) => {
+const GameZone = ({counter,setGames,games}) => {
 
   const [playing, setPlaying] = useState(true)
   const [finished, setFinished] = useState(false)
@@ -38,8 +38,8 @@ const GameZone = ({counter,addGame}) => {
   }
 
   const restarting = () => {
-    counter( winner !== null? ( winner ? 1 : 2):(0))
-    addGame(zonas)
+    finished? counter( winner !== null? ( winner ? 1 : 2):(0)):console.log('reinicio sin finalizar')
+    !finished? (console.log('juegos iguales')) : setGames([...games,zonas])
     setFinished(false)
     setWinner(null)
     setZonas(['', '', '', '', '', '', '', '', ''])
@@ -48,7 +48,7 @@ const GameZone = ({counter,addGame}) => {
   useEffect(() => testings(), [zonas])
 
   return (
-    <div className="text-center mx-auto md:w-3/6 bg-slate-300 py-5 rounded-3xl">
+    <div className="text-center mx-auto md:w-3/6 bg-slate-300 py-5 rounded-3xl shadow-lg shadow-black">
       <h1 className="font-black text-red-500 mt-5 mb-5">
         {!finished ? (playing ? 'Es turno del jugador X' : 'Es turno del jugador O') : (winner !== null ? ( winner? 'Gana el jugador X' : 'Gana el jugador O') : 'Empate, Tablero lleno')}
       </h1>

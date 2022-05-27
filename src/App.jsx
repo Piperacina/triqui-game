@@ -24,10 +24,6 @@ function App() {
     }
   }
 
-  const addGame = (j) =>{
-    setGames(...games,j)
-  }
-
   return (
     <div className="container  mx-auto h-screen">
       <Header/>
@@ -40,7 +36,8 @@ function App() {
         />
         <GameZone
           counter={counter}
-          addGame={addGame}
+          setGames={setGames}
+          games={games}
         />
         <Previews
           games={games}
