@@ -1,14 +1,14 @@
 const Puntuacion = ({winsP1, winsP2, ties}) => {
     
   return (
-    <div className="md:w-2/6 text-center mx-auto text-lg mr-10 py-5">
-    <div className="rounded-xl my-5 py-3 bg-slate-500 shadow-xl shadow-gray-600">
+    <div className="md:w-2/6 text-center mx-auto text-lg md:mr-10">
+    <div className="rounded-xl mb-3 py-3 bg-slate-500 shadow-xl shadow-gray-600">
         <h2 className="text-white text-2xl font-black w-3/4 mx-auto mb-2">Puntuacion</h2>
         <p className="text-white text-xl w-5/6 mx-auto">Puntos del jugaor 1 (X) = {winsP1}</p>
         <p className="text-white text-xl w-5/6 mx-auto">Puntos del jugaor 2 (O) = {winsP2}</p>
         <p className="text-white text-xl w-5/6 mx-auto">Empates = {ties}</p>
     </div>
-    <div className="rounded-xl my-5 py-3 bg-slate-500 shadow-xl shadow-gray-600">
+    <div className="rounded-xl mb-3 py-3 bg-slate-500 shadow-xl shadow-gray-600">
         <h3 className="text-white text-2xl text-center mx-auto font-black">Instruciones</h3>
         <p className="text-white text-justify mx-5 mt-2 font-thin">
           Cada jugador debera seleccionar una casilla, por turnos.

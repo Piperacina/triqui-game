@@ -3,7 +3,7 @@ import React from 'react'
 const Games = ({game}) => {
     return (
         <>
-            <table className="bg-white text-lg mx-auto my-3 px-5 w-3/6 text-center border-blue-900 border-2 shadow-md shadow-blue-900 text-red-500">
+            <table className="bg-white text-lg mx-auto my-3 md:px-5 md:w-3/6 text-center border-blue-900 border-2 shadow-md shadow-blue-900 text-red-500">
                 <tbody>
                     <tr className="border-b-2  border-gray-900 h-3/3">
                         <td className="border-r-2  border-gray-900 w-1/3 h-1/3">{game[0]===''?('-'):(game[0])}</td>
