@@ -32,7 +32,6 @@ function App() {
           winsP1={winsP1}
           winsP2={winsP2}
           ties={ties}
-
         />
         <GameZone
           counter={counter}

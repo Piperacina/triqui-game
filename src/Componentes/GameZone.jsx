@@ -61,7 +61,7 @@ const GameZone = ({counter,setGames,games}) => {
               onClick={(e) => {
                 fill(0)
               }}>
-              {zonas[0]===''?('-'):(zonas[0])}
+              {zonas[0]===''?(<span>&nbsp;</span>):(zonas[0])}
             </td>
             <td
               className="border-0 border-r-4 border-r-gray-800 w-1/3 hover:bg-gray-400"
@@ -69,7 +69,7 @@ const GameZone = ({counter,setGames,games}) => {
               onClick={(e) => {
                 fill(1)
               }}>
-              {zonas[1]===''?('-'):(zonas[1])}
+              {zonas[1]===''?(<span>&nbsp;</span>):(zonas[1])}
             </td>
             <td
               className="border-0 border-l-4 border-l-gray-800 w-1/3 hover:bg-gray-400"
@@ -77,7 +77,7 @@ const GameZone = ({counter,setGames,games}) => {
               onClick={(e) => {
                 fill(2)
               }}>
-              {zonas[2]===''?('-'):(zonas[2])}
+              {zonas[2]===''?(<span>&nbsp;</span>):(zonas[2])}
             </td>
           </tr>
           <tr className="border-0 border-b-4 border-b-gray-800 h-1/3">
@@ -87,7 +87,7 @@ const GameZone = ({counter,setGames,games}) => {
               onClick={(e) => {
                 fill(3)
               }}>
-              {zonas[3]===''?('-'):(zonas[3])}
+              {zonas[3]===''?(<span>&nbsp;</span>):(zonas[3])}
             </td>
             <td
               className="border-0 border-r-4 border-r-gray-800 w-1/3 hover:bg-gray-400"
@@ -95,7 +95,7 @@ const GameZone = ({counter,setGames,games}) => {
               onClick={(e) => {
                 fill(4)
               }}>
-              {zonas[4]===''?('-'):(zonas[4])}
+              {zonas[4]===''?(<span>&nbsp;</span>):(zonas[4])}
             </td>
             <td
               className="border-0 border-l-4 border-l-gray-800 w-1/3 hover:bg-gray-400"
@@ -103,7 +103,7 @@ const GameZone = ({counter,setGames,games}) => {
               onClick={(e) => {
                 fill(5)
               }}>
-              {zonas[5]===''?('-'):(zonas[5])}
+              {zonas[5]===''?(<span>&nbsp;</span>):(zonas[5])}
             </td>
           </tr>
           <tr>
@@ -113,7 +113,7 @@ const GameZone = ({counter,setGames,games}) => {
               onClick={(e) => {
                 fill(6)
               }}>
-              {zonas[6]===''?('-'):(zonas[6])}
+              {zonas[6]===''?(<span>&nbsp;</span>):(zonas[6])}
             </td>
             <td
               className="border-0 border-r-4 border-r-gray-800 w-1/3 hover:bg-gray-400"
@@ -121,7 +121,7 @@ const GameZone = ({counter,setGames,games}) => {
               onClick={(e) => {
                 fill(7)
               }}>
-              {zonas[7]===''?('-'):(zonas[7])}
+              {zonas[7]===''?(<span>&nbsp;</span>):(zonas[7])}
             </td>
             <td
               className="border-0 border-l-4 border-l-gray-800 w-1/3 hover:bg-gray-400"
@@ -129,7 +129,7 @@ const GameZone = ({counter,setGames,games}) => {
               onClick={(e) => {
                 fill(8)
               }}>
-              {zonas[8]===''?('-'):(zonas[8])}
+              {zonas[8]===''?(<span>&nbsp;</span>):(zonas[8])}
             </td>
           </tr>
         </tbody>
